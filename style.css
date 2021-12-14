@@ -1,0 +1,316 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f3f7;
+}
+
+#container {
+  text-align: center;
+  margin: 6.25rem auto;
+  width: 60%;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+}
+
+#container::before,
+#container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+#container::before {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#8838ff), to(#e942ff));
+  background-image: linear-gradient(to top, #8838ff, #e942ff);
+  top: -50%;
+  left: -50%;
+  border-radius: 0 0 25vh;
+}
+
+#container::after {
+  background-color: #f0edf3;
+  bottom: -50%;
+  right: -50%;
+  border-radius: 25vh 0 0;
+}
+
+.phone {
+  overflow: hidden;
+  border: 10px solid white;
+  border-radius: 30px;
+  font-size: 6px;
+  height: 65vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[10];
+      grid-template-rows: repeat(10, auto);
+  margin: 1.5rem auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f3f7;
+  -webkit-box-shadow: 0px 0px 15px 0 gray;
+          box-shadow: 0px 0px 15px 0 gray;
+}
+
+.phone img {
+  width: 2.5rem;
+}
+
+.phone .phone-heading {
+  font-size: clamp(8px, 3vw, 2rem);
+  background-image: -webkit-gradient(linear, left top, right top, from(#8838ff), to(#e942ff));
+  background-image: linear-gradient(to right, #8838ff, #e942ff);
+  height: 100%;
+  position: relative;
+  color: #f5f3f7;
+  font-weight: 500;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.phone .phone-heading p {
+  color: #c6cacd;
+}
+
+.phone .phone-heading .heading {
+  margin: 2rem auto 2px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.phone .phone-heading .name {
+  font-size: clamp(8px, 2vw, 1.4rem);
+  margin: 0 auto 2px 5px;
+  text-align: left;
+}
+
+.phone .phone-heading .far {
+  margin: 4px;
+}
+
+.phone .phone-heading .fa-ellipsis-v {
+  margin: 0 30px;
+}
+
+.phone .phone-heading img {
+  width: clamp(23px, 7vw, 3rem);
+  border-radius: 50%;
+  border: 1px solid white;
+  float: right;
+  margin: 0 5px 0;
+}
+
+.phone .phone-heading::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 20px;
+  background-color: white;
+  left: 25%;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.phone .chat-left {
+  font-size: clamp(6px, 2.5vw, 1rem);
+  text-align: left;
+  background-color: #f5e6ff;
+  width: 60%;
+  border-radius: 12px 12px 12px 0px;
+  color: #d89eff;
+  padding: 6px;
+  margin: 0 10px;
+}
+
+.phone .chat-right {
+  font-size: clamp(6px, 2.5vw, 1rem);
+  text-align: left;
+  background-color: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 12px 12px 0px 12px;
+  color: #d89eff;
+  padding: 6px;
+  margin: 0 10px 0 auto;
+  -webkit-box-shadow: -4px -4px 5px 0 #f5f3f7, 0 0 5px gray;
+          box-shadow: -4px -4px 5px 0 #f5f3f7, 0 0 5px gray;
+}
+
+.phone .dog-image {
+  margin: 0 0 0 auto;
+}
+
+.phone .dog-image img {
+  border-radius: 15px;
+  width: clamp(2rem, 10vw, 9rem);
+}
+
+.phone .price {
+  font-size: clamp(6px, 2.5vw, 1rem);
+  width: 60%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(to right, #e942ff, #8838ff);
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.phone .price span {
+  font-size: clamp(6px, 2.5vw, 1rem);
+  margin-left: 5px;
+  color: white;
+}
+
+.phone .chat-box {
+  color: #c6cacd;
+  font-size: 0.8rem;
+  margin: 5px auto;
+  width: 90%;
+  height: 60%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+}
+
+.phone .chat-box p {
+  margin: 0 auto;
+}
+
+.phone .chat-box .fa-greater-than {
+  color: white;
+  font-size: clamp(1rem, 4vw, 2rem);
+  border: 5px solid #3e2753;
+  border-radius: 50%;
+  width: clamp(26px, 5vw, 55px);
+  background-color: #3e2753;
+  height: clamp(26px, 5vw, 55px);
+}
+
+.text > * {
+  margin: 20px auto;
+}
+
+.text h1 {
+  color: #3e2753;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+}
+
+.text p {
+  font-size: clamp(12px, 3vw, 2rem);
+  color: #a39daa;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1280px) {
+  #container {
+    text-align: center;
+    margin: 6.25rem auto;
+    width: 65%;
+    font-family: "Rubik", sans-serif;
+    position: relative;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 70px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 1250px;
+  }
+  .container .phone {
+    width: 17.3vw;
+    border: 10px solid white;
+    border-radius: 2.5rem;
+    max-height: 710px;
+    max-width: 336px;
+  }
+  .container .phone-heading {
+    font-size: 1rem;
+  }
+  .container .phone-heading::before {
+    left: 25%;
+  }
+  .container .phone .name {
+    font-size: 0.6rem;
+  }
+  .container .phone img {
+    width: 2.5rem;
+  }
+  .container .phone .chat-left,
+  .container .phone .chat-right {
+    font-size: 0.7rem;
+  }
+  .container .phone .fa-greater-than {
+    color: white;
+    font-size: clamp(1rem, 4vw, 1rem);
+    border: 5px solid #3e2753;
+    border-radius: 50%;
+    width: 25px;
+    background-color: #3e2753;
+    height: clamp(26px, 5vw, 30px);
+  }
+  .container .text {
+    width: 50%;
+    text-align: left;
+  }
+  .container .text h1 {
+    font-size: clamp(1rem, 5vw, 2.5rem);
+  }
+  .container .text p {
+    font-size: clamp(0.6rem, 5vw, 1.25rem);
+  }
+  #container::before,
+  #container::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 150%;
+    width: 40%;
+  }
+  #container::before {
+    top: -50%;
+    left: -24%;
+    border-radius: 0 0 30vh 25vh;
+  }
+  #container::after {
+    bottom: -50%;
+    right: -25%;
+    border-radius: 25vh 25vh 0 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

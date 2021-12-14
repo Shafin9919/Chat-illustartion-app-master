@@ -1,0 +1,342 @@
+// COLORS
+
+$paleviolet: hsl(276, 100%, 81%);
+$moderateviolet: hsl(276, 55%, 52%);
+$desaturatedDarkViolet: hsl(271, 15%, 43%);
+$grayishblue: hsl(206, 6%, 79%);
+$veryDarksesaturatedViolet: hsl(271, 36%, 24%);
+$darkGrayishViolet: hsl(270, 7%, 64%);
+
+//Gradients
+
+$lightmagenta: hsl(293, 100%, 63%);
+$lightviolet: hsl(264, 100%, 61%);
+
+//Secondary
+
+$white: hsl(0, 0%, 100%);
+$lightGrayishViolet: hsl(270, 20%, 96%);
+$veryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+$veryLightMagenta: hsl(289, 100%, 72%);
+
+//Fonts
+
+$rubik: "Rubik", sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $lightGrayishViolet;
+}
+
+#container {
+  text-align: center;
+  margin: 6.25rem auto;
+  // right:25%;
+  // transform: translatex(50%);
+
+  width: 60%;
+  font-family: $rubik;
+  // position: absolute;
+  position: relative;
+}
+
+// ----Shapes----
+
+#container::before,
+#container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+#container::before {
+  background-image: linear-gradient(to top, $lightviolet, $lightmagenta);
+  top: -50%;
+  left: -50%;
+  border-radius: 0 0 25vh;
+}
+#container::after {
+  background-color: darken($lightGrayishViolet, 2%);
+  bottom: -50%;
+  right: -50%;
+  border-radius: 25vh 0 0;
+}
+
+// -----App UI-----
+
+.phone {
+  overflow: hidden;
+  border: 10px solid $white;
+  border-radius: 30px;
+  font-size: 6px;
+  height: 65vh;
+  display: grid;
+  grid-template-rows: repeat(10, auto);
+  margin: 1.5rem auto;
+  align-items: center;
+  background-color: $lightGrayishViolet;
+  box-shadow:  0px 0px 15px 0 gray;
+  img {
+    width: 2.5rem;
+  }
+
+  // ----UI Heading----
+
+  .phone-heading {
+    font-size: clamp(8px, 3vw, 2rem);
+    background-image: linear-gradient(to right, $lightviolet, $lightmagenta);
+
+    height: 100%;
+    position: relative;
+    color: $lightGrayishViolet;
+    font-weight: 500;
+    align-items: center;
+
+    p {
+      color: $grayishblue;
+    }
+    .heading {
+      margin: 2rem auto 2px 5px;
+      display: flex;
+      align-items: center;
+    }
+    .name {
+      font-size: clamp(8px, 2vw, 1.4rem);
+      margin: 0 auto 2px 5px;
+      text-align: left;
+    }
+    .far {
+      margin: 4px;
+    }
+    .fa-ellipsis-v {
+      margin: 0 30px;
+    }
+
+    img {
+      width: clamp(23px, 7vw, 3rem);
+      border-radius: 50%;
+      border: 1px solid white;
+      float: right;
+      margin: 0 5px 0;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 20px;
+      background-color: $white;
+      left: 25%;
+      border-radius: 0px 0px 10px 10px;
+    }
+  }
+
+  // ----Conversations----
+
+  .chat-left {
+    font-size: clamp(6px, 2.5vw, 1rem);
+    text-align: left;
+    background-color: lighten($color: $paleviolet, $amount: 14%);
+    width: 60%;
+    border-radius: 12px 12px 12px 0px;
+    color: $paleviolet;
+    padding: 6px;
+    margin: 0 10px;
+  }
+  .chat-right {
+    font-size: clamp(6px, 2.5vw, 1rem);
+    text-align: left;
+    background-color: $white;
+    width: max-content;
+    border-radius: 12px 12px 0px 12px;
+    color: $paleviolet;
+    padding: 6px;
+    margin: 0 10px 0 auto;
+    box-shadow: 
+    -4px -4px 5px 0 $lightGrayishViolet,
+    0 0 5px gray;
+  }
+  .dog-image {
+    margin: 0 0 0 auto;
+
+    img {
+      border-radius: 15px;
+      //   width: 2.5rem;
+      width: clamp(2rem, 10vw, 9rem);
+    }
+  }
+  .price {
+    font-size: clamp(6px, 2.5vw, 1rem);
+    width: 60%;
+    background-image: linear-gradient(to right, $lightmagenta, $lightviolet);
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    span {
+      font-size: clamp(6px, 2.5vw, 1rem);
+      margin-left: 5px;
+      color: $white;
+    }
+  }
+
+  // ----Text Field----
+
+  .chat-box {
+    color: $grayishblue;
+    font-size: 0.8rem;
+    margin: 5px auto;
+    width: 90%;
+    height: 60%;
+    background-color: $white;
+    display: flex;
+    border-radius: 30px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    p {
+      margin: 0 auto;
+    }
+    .fa-greater-than {
+      color: white;
+      font-size: clamp(1rem, 4vw, 2rem);
+      border: 5px solid $veryDarkDesaturatedViolet;
+      border-radius: 50%;
+      // margin:0 0 0 auto;
+      width: clamp(26px, 5vw, 55px);
+      //  height: max-content;
+      background-color: $veryDarkDesaturatedViolet;
+
+      height: clamp(26px, 5vw, 55px);
+    }
+  }
+}
+
+// ----Paragraph----
+
+.text > * {
+  margin: 20px auto;
+}
+.text {
+  h1 {
+    color: $veryDarkDesaturatedViolet;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+  }
+  p {
+    font-size: clamp(12px, 3vw, 2rem);
+    color: $darkGrayishViolet;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+}
+
+// ----Desktop Site----
+
+@media screen and(min-width:1280px) {
+  #container {
+    text-align: center;
+    margin: 6.25rem auto;
+    // right:25%;
+    // transform: translatex(50%);
+    width: 65%;
+    font-family: $rubik;
+    // position: absolute;
+    position: relative;
+  }
+  .container {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    flex: 0 0 50%;
+    max-width: 1250px;
+
+    // ----App UI----
+
+    .phone {
+      width: 17.3vw;
+      border: 10px solid white;
+      border-radius: 2.5rem;
+      max-height: 710px;
+      max-width: 336px;
+        
+      &-heading {
+        font-size: 1rem;
+        &::before {
+          left: 25%;
+        }
+      }
+
+      //   ----UI Heading----
+
+      .name {
+        font-size: 0.6rem;
+      }
+      img {
+        width: 2.5rem;
+      }
+
+      //   ----onversations----
+
+      .chat-left,
+      .chat-right {
+        font-size: 0.7rem;
+      }
+
+      // ----Text Field----
+
+      .fa-greater-than {
+        color: white;
+        font-size: clamp(1rem, 4vw, 1rem);
+        border: 5px solid $veryDarkDesaturatedViolet;
+        border-radius: 50%;
+        // margin:0 0 0 auto;
+        width: 25px;
+        //  height: max-content;
+        background-color: $veryDarkDesaturatedViolet;
+
+        height: clamp(26px, 5vw, 30px);
+      }
+    }
+
+    // ----Paragraph----
+
+    .text {
+      width: 50%;
+      text-align: left;
+      h1 {
+        font-size: clamp(1rem, 5vw, 2.5rem);
+      }
+      p {
+        font-size: clamp(0.6rem, 5vw, 1.25rem);
+      }
+    }
+  }
+
+  //   ----Shapes----
+
+  #container::before,
+  #container::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 150%;
+    width: 40%;
+  }
+  #container::before {
+    // background-image: linear-gradient(to top, $lightviolet, $lightmagenta);
+    top: -50%;
+    left: -24%;
+    border-radius: 0 0 30vh 25vh;
+  }
+  #container::after {
+    // background-color: darken($lightGrayishViolet, 2%);
+    bottom: -50%;
+    right: -25%;
+    border-radius: 25vh 25vh 0 0;
+  }
+}
